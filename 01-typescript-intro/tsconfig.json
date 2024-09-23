@@ -1,0 +1,53 @@
+//Typescript configuration
+{
+  "compilerOptions": {
+    // Specify the ECMAScript version to compile to
+    "target": "ES2020",
+
+    // Use the define semantics for class fields, aligning with the latest standards
+    "useDefineForClassFields": true,
+
+    // Define the module system to use for the output files
+    "module": "ESNext",
+
+    // Specify library files to include in the compilation
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+    // Skip type checking of declaration files (.d.ts) for faster compilation
+    "skipLibCheck": true,
+
+    /* Bundler mode options */
+
+    // Set module resolution to be compatible with modern bundlers
+    "moduleResolution": "bundler",
+
+    // Allow importing TypeScript files with .ts extensions
+    "allowImportingTsExtensions": true,
+
+    // Treat each file as an isolated module
+    "isolatedModules": true,
+
+    // Force all files to be treated as modules, even without import/export statements
+    "moduleDetection": "force",
+
+    // Prevent the compiler from emitting output files (JavaScript or .d.ts)
+    "noEmit": true,
+
+    /* Linting options */
+
+    // Enable all strict type-checking options
+    "strict": true,
+
+    // Raise an error for local variables that are declared but not used
+    "noUnusedLocals": true,
+
+    // Raise an error for function parameters that are declared but not used
+    "noUnusedParameters": true,
+
+    // Prevent fall-through cases in switch statements unless explicitly marked
+    "noFallthroughCasesInSwitch": true
+  },
+  
+  // Specify the files or directories to include in the compilation
+  "include": ["src"]
+}
