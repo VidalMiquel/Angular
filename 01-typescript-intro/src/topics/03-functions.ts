@@ -1,7 +1,7 @@
 export { };
 
 //Standard function;
-//Can be called before its definiton in the code. (hositing)
+// Can be called before its definition in the code. (hoisting)
 //They have theri own 'this'
 function addNumbers(a:number, b: number): number {
     return a + b;
@@ -12,7 +12,7 @@ function addNumbers(a:number, b: number): number {
 
 //Landa function. Used for callbacks.
 //You must define it before calling it.
-//`this` i sinherit
+//`this` is sinherit
 const addNumbersArrow = (a: number, b: number):string => {
     return `${a+b}`;
 }
