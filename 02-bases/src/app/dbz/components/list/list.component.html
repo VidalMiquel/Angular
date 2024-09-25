@@ -1,0 +1,30 @@
+<h4>Characters list</h4>
+
+<ul class="list-group">
+  <!-- index is a keyword used by ngFor to indicate the object position-->
+  <li *ngFor="let character of characterList;
+    let i = index;
+    let isFirst = first;
+    let isLast = last;
+    let isEven=even;
+    let isOdd = odd"
+    class="list-group-item" [ngClass]="{'list-group-item-success': isEven,'list-group-item-dark': isOdd }">
+
+    <span class="text-primary"> {{i}}. </span>
+
+    <span>{{character.name}} - </span>
+
+    <strong>Power: </strong>
+
+    <span>{{character.power}} - </span>
+<!--
+    <span>It's the first: {{isFirst}} - </span>
+
+    <span>It's the last: {{isLast}} - </span>
+
+    <span>It's even: {{isEven}} - </span>
+
+    <span>It's odd: {{isOdd}}</span>
+-->
+  </li>
+</ul>

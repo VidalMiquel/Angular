@@ -1,0 +1,29 @@
+<h3>Listado de héroes</h3>
+
+<!--ngFor (strucutral directive) use -->
+<ul class="mt-2 list-group">
+<li
+*ngFor="let name of heroNames"
+class="list-group-item">
+<strong>{{name}}</strong>
+</li>
+</ul>
+
+<!--ngIf-else (strucutral directive) use -->
+<div *ngIf="deletedHero; else nothingWasDeleted">
+  <h3>Deleted hero <small class="text-danger">{{deletedHero}}</small></h3>
+</div>
+<!-- Local reference -->
+<!-- This type of structure don't change my html structure -->
+<ng-template #nothingWasDeleted>
+  <h3>No deleted hero</h3>
+</ng-template>
+
+
+
+<button
+*ngIf="heroNames.length>0"
+(click)="removeLastHero()"
+class="btn btn-outline-danger">
+  Delete last hero
+</button>
