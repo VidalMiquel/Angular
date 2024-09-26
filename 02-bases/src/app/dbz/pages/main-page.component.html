@@ -3,9 +3,18 @@
 
 <div class="row">
   <div class="col">
-    <dbz-list [characterList]="characters"></dbz-list>
+    <!-- From fahter to son. The [characterList] indicates we are listening for attributs.-->
+    <!--
+      - onDELETE connects the father with its son via @output located at the SON. SON SENDS DATA
+      - [characterList] connects the father with its son via @input located at the SON. SON RECIVES DATA
+
+    -->
+    <dbz-list (onDelete)="onDeleteCharacter($event)" [characterList]="characters"></dbz-list>
   </div>
   <div class="col">
-     <dbz-add-character></dbz-add-character>
+    <!--FRom son to father. We use (onNewCharacter) becase we are waiting for a event.
+        Moreover the onNewCharacter get the emitted character thanks to '$event'.
+    -->
+     <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
   </div>
 </div>
