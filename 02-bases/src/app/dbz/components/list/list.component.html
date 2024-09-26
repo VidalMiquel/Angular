@@ -8,15 +8,18 @@
     let isLast = last;
     let isEven=even;
     let isOdd = odd"
-    class="list-group-item" [ngClass]="{'list-group-item-success': isEven,'list-group-item-dark': isOdd }">
+    class="list-group-item d-flex justify-content-between align-items-center" [ngClass]="{'list-group-item-success': isEven,'list-group-item-dark': isOdd }">
 
-    <span class="text-primary"> {{i}}. </span>
+    <div>
+      <span class="text-primary"> {{i}}. </span>
 
-    <span>{{character.name}} - </span>
+      <span>{{character.name}} - </span>
 
-    <strong>Power: </strong>
+      <strong>Power: </strong>
 
-    <span>{{character.power}} - </span>
+      <span>{{character.power}}  </span>
+
+    </div>
 <!--
     <span>It's the first: {{isFirst}} - </span>
 
@@ -26,5 +29,6 @@
 
     <span>It's odd: {{isOdd}}</span>
 -->
+    <button type ="submit" class="btn btn-danger" (click)="onDeleteCharacter(character.id)"> X </button>
   </li>
 </ul>
