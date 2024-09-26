@@ -3,5 +3,4 @@ Introducing the **Angular** course on Udemy titled: **Angular de Cero a Experto*
 
 The main objective is to familiarize myself with the Angular framework to integrate it with Spring Boot.
 
-
-
+LURL to the created web: https://basicsbymvidalc.netlify.app/
