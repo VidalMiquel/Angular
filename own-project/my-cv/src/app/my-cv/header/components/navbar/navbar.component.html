@@ -1,12 +1,7 @@
-<p>navbar works!</p>
-<!-- 
+<!-- navbar.component.html -->
+<ul class="navbar-nav flex-row justify-content-center">
+    <li *ngFor="let navItem of navItems" class="nav-item mx-0 mx-lg-1">
+        <a class="nav-link py-3 px-3 px-lg-3 rounded" href="#{{navItem.redirectName}}">{{navItem.name}}</a>
+    </li>
+</ul>
 
-<div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ms-auto">
-        <li *ngFor="let navItem of navItems" class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#{{navItem.redirectName}}">{{navItem.name}}</a>
-        </li>
-    </ul>
-</div>
-
--->

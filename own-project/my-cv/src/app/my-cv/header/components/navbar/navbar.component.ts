@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { navItem } from '../../interfaces/nav-item.interface';
 
 @Component({
   selector: 'my-cv-navbar',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  @Input()
+  public navItems: navItem[] = [];
+  
 }
