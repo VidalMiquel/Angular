@@ -1,27 +1,38 @@
-# Bases
+# Starting with the Angular Framework
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+## Topics to Cover
 
-## Development server
+1. **Components**
+   - Definition: Building blocks of Angular applications.
+   - Functions: Control views, manage data, and handle user interactions.
+   - Interactions: Communicate with services and other components.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. **Services**
+   - Definition: Singleton objects that provide functionality across components.
+   - Functions: Handle business logic, data retrieval, and shared state.
+   - Interactions: Injected into components to provide data and functionality.
 
-## Code scaffolding
+3. **Modules**
+   - Definition: Containers for a cohesive block of code dedicated to an application domain.
+   - Functions: Organize components, services, and other modules.
+   - Interactions: Facilitate lazy loading and modularization of the application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+4. **Interfaces**
+   - Definition: Contracts for the structure of objects.
+   - Functions: Define the shape of data, ensuring type safety.
+   - Interactions: Used to enforce consistency across components and services.
 
-## Build
+5. **Pages**
+   - Definition: Components that represent a view or screen in the application.
+   - Functions: Render UI elements and manage user navigation.
+   - Interactions: Can utilize components and services to display data.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Deployment on GitHub Pages
+- Steps to Deploy:
+  1. Build the Angular application using `ng build --prod`.
+  2. Create a new GitHub repository.
+  3. Push the contents of the `dist` folder to the `gh-pages` branch.
+  4. Enable GitHub Pages in the repository settings.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Accessing the Application:
+  - Once deployed, access the application via the browser using the GitHub Pages URL.
