@@ -2,26 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+GifsApp is a GIF searcher application that allows users to search for GIFs based on a given concept. It maintains a history of searched terms for quick access, enhancing the user experience.
 
-## Code scaffolding
+## Key Concepts
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **API Integration**: The app makes calls to a GIF API to fetch relevant GIFs based on user searches.
+- **LocalStorage**: Utilizes LocalStorage to maintain a history of searched terms, allowing users to quickly access their previous searches.
 
-## Build
+## Features
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Search for GIFs by entering a concept.
+- View and quickly access previously searched terms from the history.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
