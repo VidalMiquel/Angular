@@ -13,17 +13,24 @@ export class ByRegionPageComponent {
 
   public regions:Region[] = ['Africa','Asia','Europe','Oceania','America'];
   public countries: Country[] = []
+  public isLoading: boolean = false
   public selectedRegion?: Region
 
   constructor(private countriesSErvice:CountriesService){}
 
+  ngOnInit(): void {
+    this.countries = this.countriesSErvice.cacheStore.byRegion.countries;
+    this.selectedRegion = this.countriesSErvice.cacheStore.byRegion.region;
+  }
 
   searchByRegion(term:Region):void{
     this.selectedRegion = term;
+    this.isLoading = true;
     //we have to sbuscribe to the Observable(definded at Service)
     this.countriesSErvice.searchRegion(term)
     .subscribe(countires =>{
       this.countries = countires
+      this.isLoading = false;
     });
   }
 }
