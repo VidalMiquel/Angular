@@ -1,27 +1,38 @@
-# PipesApp
+## Overview
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+In this project, we have successfully implemented Angular features, focusing on the effective use of pipes along with the integration of PrimeNG and PrimeFlex. Our goal was to create a dynamic and responsive user interface that enhances the user experience.
 
-## Development server
+### Utilizing Pipes
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+We leveraged Angular's powerful pipe feature to transform and format data directly within our templates. This includes:
 
-## Code scaffolding
+- **Uppercase, Lowercase, and Titlecase**: For text transformations, ensuring that our data is presented clearly.
+- **Decimal, Currency, and Percent**: For numerical data, allowing us to display values in a user-friendly manner.
+- **Slice**: To manipulate arrays and strings, making it easier to present relevant information.
+- **Async**: To handle asynchronous data streams seamlessly.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Integrating PrimeNG and PrimeFlex
 
-## Build
+To enhance our user interface, we utilized **PrimeNG**, a rich set of UI components that provide a wide range of pre-built elements, such as tables, charts, and forms. This allowed us to create a visually appealing and functional application quickly.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Additionally, we incorporated **PrimeFlex**, a utility library that offers a flexible and responsive layout system. With PrimeFlex, we were able to manage spacing, alignment, and responsiveness effectively, ensuring our application looks great on any device.
 
-## Running unit tests
+## Example Implementation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+An example of our implementation can be seen in the use of a PrimeNG table, where we applied various pipes to format the data displayed:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```html
+<p-table [value]="data">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-item>
+    <tr>
+      <td>{{ item.name | titlecase }}</td>
+      <td>{{ item.price | currency:'USD' }}</td>
+    </tr>
+  </ng-template>
+</p-table>
