@@ -14,7 +14,7 @@ export class ListPageComponent implements OnInit{
   constructor(private heroesService:HeroesService){}
 
   ngOnInit(): void {
-    this.heroesService.getHeros()
+    this.heroesService.getHeroes()
     .subscribe(heroes => this.heroes = heroes);
   }
 
