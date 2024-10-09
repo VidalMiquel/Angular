@@ -1,28 +1,12 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "usuario": "John Doe",
       "email": "john.due@gmail.com"
     }
   ],
   "heroes": [
-    {
-      "id": "dc-batman",
-      "superhero": "Batman",
-      "publisher": "DC Comics",
-      "alter_ego": "Bruce Wayne",
-      "first_appearance": "Detective Comics #27",
-      "characters": "Bruce Wayne"
-    },
-    {
-      "id": "dc-superman",
-      "superhero": "Superman",
-      "publisher": "DC Comics",
-      "alter_ego": "Kal-El",
-      "first_appearance": "Action Comics #1",
-      "characters": "Kal-El"
-    },
     {
       "id": "dc-flash",
       "superhero": "Flash",
@@ -166,6 +150,15 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "",
+      "superhero": "Superpipas",
+      "publisher": "DC Comics",
+      "alter_ego": "Ka-eli",
+      "first_appearance": "Action Commics #1",
+      "characters": "Kal-eli",
+      "alt_img": "https://upload.wikimedia.org/wikipedia/en/3/35/Supermanflying.png"
     }
   ]
 }
