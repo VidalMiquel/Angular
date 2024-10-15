@@ -20,6 +20,7 @@ export class DynamicPageComponent{
   get favoriteGames() {
     return this.myForm.get('favoriteGames') as FormArray;
   }
+
   onSubmit():void{
     if(this.myForm.invalid){
       this.myForm.markAllAsTouched();
