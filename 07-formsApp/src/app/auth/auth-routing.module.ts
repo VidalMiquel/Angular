@@ -11,7 +11,7 @@ const routes: Routes = [
       },
       {
         path:'**',
-        redirectTo: 'sing-up'
+        redirectTo: 'sign-up'
       }
     ]
   }
