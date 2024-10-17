@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MyCvModule } from './my-cv/my-cv.module'; // Ensure HeaderModule is included in MyCvModule
+import { SharedModule } from './shared/shared.module';
+import { CurriculumModule } from './curriculum/curriculum.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,9 @@ import { MyCvModule } from './my-cv/my-cv.module'; // Ensure HeaderModule is inc
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MyCvModule  // Make sure MyCvModule includes all necessary components/modules
+    SharedModule,
+    CurriculumModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+<section class="page-section portfolio" id="portfolio">
+  <div class="container">
+      <h1 class="masthead-heading text-uppercase text-center">
+        PORTFOLIO
+      </h1>
+      <!-- Icon Divider-->
+      <div class="divider-custom p-2">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <div class="row jsutify-contnet-center mt-4">
+        <div class="col-md-6 col-lg-4 mb-5" *ngFor="let project of projects">
+          <div class="portfolio-item mx-auto" data-bs-toggle="modal">
+            <shared-project-card [project]="project"></shared-project-card>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>

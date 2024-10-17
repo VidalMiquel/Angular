@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { navItem } from '../interfaces/nav-item.interface';
+import { navItem } from '../../curriculum/interfaces/interfaces/nav-item.interface';
 
 @Injectable({
   providedIn: 'root'
