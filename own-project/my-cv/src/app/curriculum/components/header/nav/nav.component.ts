@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CurriculumService } from '../../services/curriculum.service';
-import { navItem } from '../../interfaces/nav-item.interface';
+import { CurriculumService } from '../../../services/curriculum.service';
+import { navItem } from '../../../interfaces/nav-item.interface';
 
 @Component({
-  selector: 'curriculum-nav',
+  selector: 'curriculum-nav-introduction',
   templateUrl: './nav.component.html',
   styles: ``
 })

@@ -1,19 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { CurriculumService } from '../../services/curriculum.service';
-import { project } from '../../interfaces/project-interface';
+import { GitHubProject } from '../../interfaces/project-interface';
 
 @Component({
   selector: 'curriculum-portfolio',
   templateUrl: './portfolio.component.html',
   styles: ``
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit{
 
-  public projects: project[] = [];
+  public githubProjects?: GitHubProject[] = [];
 
-  constructor(private curriculumService: CurriculumService) {}
+  constructor(private curriculumService: CurriculumService){}
 
   ngOnInit(): void {
-    this.projects = this.curriculumService.getProjects();
+    this.curriculumService.getProjectsHttpRequest()
+    .subscribe(projects => this.githubProjects = projects);
   }
+
+
 }
