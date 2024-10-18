@@ -1,0 +1,59 @@
+
+
+<!--
+   <div class="card custom-height  shadow-sm">
+  <div class="card-body">
+    <h5 class="card-title">{{ project?.name }}</h5>
+    <p class="card-text">{{ project?.description }}</p>
+    <div class="d-flex justify-content-between">
+      <a class="btn btn-primary" [href]="project?.html_url" target="_blank">Ver en GitHub</a>
+      <a class="btn btn-secondary" [routerLink]="['/project', project.id]">Ver Detalles</a>
+    </div>
+  </div>
+</div>
+
+-->
+
+<!-- <mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header"></div>
+    <mat-card-title > <strong>{{ project?.name | titlecase }} </strong></mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content class="mt-3">
+    <p>
+      {{ project?.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="text-center">
+    <button mat-button mat-raised color="primary">
+      <a [href]="project?.html_url">      GitHub Link
+      </a>
+      <mat-icon>link</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card> -->
+
+
+<mat-card class="example-card mat-elevation-z4 p-2" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title><strong>{{ project?.name | removeDash}} </strong></mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="mt-2">
+    <p style="height: 100px">{{ project?.description }}</p>
+    <mat-chip-set>
+      <mat-chip *ngFor="let topic of project?.topics">{{ topic }}</mat-chip>
+    </mat-chip-set>
+  </mat-card-content>
+  <mat-card-actions class="text-center">
+    <a [href]="project?.html_url" target="_blank" style="text-decoration: none;">
+      <button mat-button mat-raised color="primary">
+        GitHub Link
+        <mat-icon>link</mat-icon>
+      </button>
+    </a>
+  </mat-card-actions>
+  <!-- <mat-card-footer class="example-card-footer">
+
+  </mat-card-footer> -->
+</mat-card>
